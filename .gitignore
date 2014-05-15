@@ -1,5 +1,5 @@
-.env
-.bundle
-Gemfile.lock
-.vagrant/machines
-Vagrantfile
+/.env
+/.bundle
+/Gemfile.lock
+/.vagrant/machines
+/Vagrantfile
