@@ -1,32 +1,34 @@
-Sinatra Template
-================
+# Sinatra Template
+
 Basic template of a Sinatra application from which fork new project
 
-Stack
------
+## Stack
+
 This template uses :
+
 - Sinatra as the main application
 - Sequel as ORM
 - PostgreSQL as the database
 - MiniTest for the unit testing
 - More to come soon
 
-Configure
----------
-- Fork a new project from this repository
-- Add your own `.env` file in the root folder, containing needed variables.
+## Configure
 
-Example :
+- Fork a new project from this repository
+- Add your own `.env` file in the root folder, containing needed variables.  
+  You can find an example in `./devkit` folder
+
 ```
 RACK_ENV=development
 DATABASE_URL='postgres://vagrant:vagrant@localhost/db'
 ```
 
-About Vagrant
--------------
-You need first to configure your box to initialize the project.
+## About Vagrant
 
-Replace the line `config.vm.box = "wheezy_min"` with whatever box you need.  
+You need first to configure your box to initialize the project.  
+Copy the `./devkit/Vagrantfile` to your project root path then
+replace the line `config.vm.box = "wheezy_min"` with whatever box you need.
+
 To install a box, simply run `vagrant box add [boxname]`  
 You can find boxes on [Vagrant Cloud][vagrantcloud]
 
