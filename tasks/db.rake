@@ -48,4 +48,4 @@ namespace :db do
     end
   end
 
-end #namespace :db
+end
