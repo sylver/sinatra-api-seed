@@ -1,7 +1,0 @@
-{
-  "foo": [
-    { "bar": "foobar1", "ber": "foober1" },
-    { "bar": "foobar2", "ber": "foober2" },
-    { "bar": "foobar3", "ber": "foober3" },
-  ]
-}

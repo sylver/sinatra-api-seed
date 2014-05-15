@@ -35,15 +35,9 @@ namespace :db do
 
   desc "Insert default dataset into the database for the current environment"
   task :seed do
-    require 'json'
-    Dir.glob("#{SEEDS_PATH}/#{ENV['RACK_ENV']}/*.json") do |json|
-      dataset = JSON.parse(IO.read(json))
-      dataset.each do |table, data|
-        model = DB[table.to_sym]
-        data.each do |set|
-          set = set.reduce({}) {|memo, (k, v)| memo.merge({ k.to_sym => v})}
-          model.insert(set)
-        end
+    ['common', ENV['RACK_ENV']].each do |dataset|
+      Dir.glob("#{SEEDS_PATH}/#{dataset}/*.rb") do |seed|
+        load seed
       end
     end
   end
