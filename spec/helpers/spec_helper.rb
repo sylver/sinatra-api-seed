@@ -12,6 +12,7 @@ include Rack::Test::Methods
 class MiniTest::Spec
   class << self
     alias :context :describe
+    alias :test :it
   end
 end
 
