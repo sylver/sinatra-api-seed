@@ -6,8 +6,6 @@
 
 namespace :test do
 
-  $LOAD_PATH.unshift(File.dirname(__FILE__))
-
   desc "run db related tests"
   task :models do
     Dir.glob('./spec/models/*_spec.rb') { |f| require f }
