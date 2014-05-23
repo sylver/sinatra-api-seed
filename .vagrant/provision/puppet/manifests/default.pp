@@ -1,7 +1,21 @@
 node backend {
+  #
+  # Generic configuration
+  #
   group { 'vagrant':
     ensure => present,
   }
+
+  package { [
+      'vim',
+      'screen'
+    ] :
+    ensure => present,
+  }
+
+  #
+  # Specific Geolocation Database stuff
+  #
   file { 'postgis.src':
     ensure => present,
     path => '/etc/apt/sources.list.d/postgist.list',
@@ -34,6 +48,10 @@ node backend {
     unless => "psql -tAc \"SELECT 1 FROM pg_extension WHERE extname='postgis';\" | grep 1",
     require => Package['postgresql-9.3', 'postgresql-9.3-postgis'],
   }
+
+  #
+  # Ruby project requirements
+  #
   package { ['bundle', 'foreman']:
     provider => gem,
     ensure => present,
