@@ -1,17 +1,25 @@
 source 'https://rubygems.org'
 
-# Common gems
-gem 'sequel'
+# Common
 gem 'rake'
 gem 'json'
+
+# Framework
 gem 'sinatra'
+gem 'sinatra-contrib'
+
+# DB
+gem 'sequel'
 gem 'pg'
 
-# Environment specific gems
+# Utils
+gem 'rfc822'
+
+# Environments
 group :development, :test do
-  gem 'shotgun'  # Dev server with code auto-reloading.
-  gem 'tux'      # Console to debug directly into the current environment
-  gem 'dotenv'   # Use of .env file with all necessary env vars
+  gem 'thin'
+  gem 'tux'
+  gem 'dotenv'
   gem 'minitest'
 end
 
