@@ -23,6 +23,21 @@ RACK_ENV=development
 DATABASE_URL='postgres://vagrant:vagrant@localhost/db'
 ```
 
+- Choose in the `config.ru` file whether use the classic style or
+  the modular style for your application
+
+```
+# Classic
+require './app'
+run Sinatra::Application
+```
+
+```
+# Modular
+require 'app/main'
+run MainApp
+```
+
 ## About Vagrant
 
 You need first to configure your box to initialize the project.  

@@ -1,6 +1,6 @@
 namespace :app do
-  desc 'Start the application'
-  task :start do
-      system "bundle exec shotgun -o 0.0.0.0 config.ru"
+  desc 'Run the application'
+  task :run do
+      system "bundle exec thin start"
   end
 end
