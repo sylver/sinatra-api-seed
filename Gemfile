@@ -11,6 +11,7 @@ gem 'sinatra-contrib'
 # DB
 gem 'sequel'
 gem 'pg'
+gem 'sequel_pg', :require=>'sequel'
 
 # Utils
 gem 'rfc822'
