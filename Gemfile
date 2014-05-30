@@ -18,6 +18,7 @@ gem 'rfc822'
 
 # Environments
 group :development, :test do
+  gem 'shotgun'
   gem 'thin'
   gem 'tux'
   gem 'dotenv'

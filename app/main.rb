@@ -1,15 +1,8 @@
 require 'sinatra/base'
-require 'sinatra/reloader'
-
-require './config/env'
+require 'config/env'
+require 'models/all'
 
 class MainApp < Sinatra::Base
-
-  require 'models/all'
-
-  configure :development do
-    register Sinatra::Reloader
-  end
 
   get "/" do
     p "Hello World !"
