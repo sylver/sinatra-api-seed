@@ -1,2 +1,3 @@
 RACK_ENV=development
 DATABASE_URL='postgres://vagrant:vagrant@localhost/db'
+PORT=3000
