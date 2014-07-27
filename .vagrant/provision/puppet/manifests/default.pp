@@ -1,4 +1,4 @@
-node backend {
+node default {
   #
   # Generic configuration
   #
@@ -52,6 +52,9 @@ node backend {
   #
   # Ruby project requirements
   #
+  package { ['ruby', 'ruby-dev', 'g++']:
+    ensure =>} present,
+  } ->
   package { ['bundle', 'foreman']:
     provider => gem,
     ensure => present,
