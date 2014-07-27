@@ -53,7 +53,7 @@ node default {
   # Ruby project requirements
   #
   package { ['ruby', 'ruby-dev', 'g++']:
-    ensure =>} present,
+    ensure => present,
   } ->
   package { ['bundle', 'foreman']:
     provider => gem,
