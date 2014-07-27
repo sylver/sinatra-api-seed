@@ -4,7 +4,6 @@ ruby '1.9.3'
 # Common
 gem 'rake'
 gem 'json'
-gem 'pony'
 gem 'thin'
 
 # Framework
@@ -24,7 +23,6 @@ gem 'dotenv'
 # Environments
 group :development, :test do
   gem 'shotgun'
-  gem 'thin'
   gem 'tux'
   gem 'minitest'
 end

@@ -8,14 +8,9 @@ GEM
     eventmachine (1.0.3)
     json (1.8.1)
     kgio (2.9.2)
-    mail (2.6.1)
-      mime-types (>= 1.16, < 3)
-    mime-types (2.3)
     minitest (5.3.3)
     multi_json (1.10.1)
     pg (0.17.1)
-    pony (1.8)
-      mail (>= 2.0)
     rack (1.5.2)
     rack-protection (1.5.3)
       rack
@@ -74,7 +69,6 @@ DEPENDENCIES
   json
   minitest
   pg
-  pony
   rake
   rfc822
   sequel
